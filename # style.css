@@ -1,56 +1,60 @@
-body {
-  background-color: #3574ac;
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* Navigation bar */
+nav {
+  background-color: #333;
   padding: 10px;
 }
 
-h1 {
-  color: lightblue;
-}
-
-main{
-  max-width: 840px;
-}
-
-main img {
-  width: 150px;
-  height: auto;
-  border: 1px solid steelblue;
-  padding: 0;
-  box-shadow: 0 0 30px gray;
-}
-
-p {
-  color: #333;
-  font-size: 18px;
-}
-button {
-  background-color: darkblue;
+/* Navigation links */
+nav a {
   color: white;
-  border: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Heading 1 */
+h1 {
+  color: #2a2a2a;
+}
+
+/* Main images */
+main img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar */
+aside {
+  width: 250px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Sidebar image */
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+/* Paragraphs */
+p {
   padding: 0;
-  font-size: 16px;
-  cursor: pointer;
 }
 
-aside{
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0, 0, 0/ 0.2);
-    padding: 1rem;
-    background-color: lightblue;
-    color:#333;
-    text-align: center;
-}
-
-aside img{
-    width: 200px;
-    height: auto;
-} 
-
+/* Footer */
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
 }
