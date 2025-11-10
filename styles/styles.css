@@ -95,7 +95,7 @@ main {
 
 /* Profile image inside main */
 main img {
-  width: 150px;
+  width: 200px;
   height: auto;
   border: 2px solid #ccc;
   padding: 5px;
