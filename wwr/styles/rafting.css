@@ -1,8 +1,6 @@
 /* CSS VARIABLES */
 :root {
   --primary-color: #0a4c8c;
-  --accent-color: #f4c542;
-  --dark-color: #333;
   --light-color: #fff;
   --text-color: #333;
 }
@@ -132,3 +130,4 @@ footer p {
   width: 30px;
   height: 30px;
 }
+
