@@ -1,0 +1,134 @@
+/* CSS VARIABLES */
+:root {
+  --primary-color: #0a4c8c;
+  --accent-color: #f4c542;
+  --dark-color: #333;
+  --light-color: #fff;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STYLES */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* HEADER & NAVIGATION */
+header {
+  background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav {
+  background-color: #333; /* fixes contrast */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+nav a {
+  color: #fff; 
+  text-decoration: none; 
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative; 
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute; 
+  top: 2rem;
+  left: 2rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-size: 2.4rem;
+  border-radius: 6px;
+}
+
+/* =============================
+   HERO ARTICLE
+   ============================= */
+.hero article {
+  position: absolute; /* required */
+  bottom: 2rem;
+  left: 2rem;
+  width: 45%;
+  background: rgba(255, 255, 255, 0.90);
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.hero article img {
+  float: right; 
+  width: 130px;
+  height: auto;
+  margin-left: 1rem;
+  border-radius: 8px;
+}
+
+/*SECTION STYLES*/
+section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+/*FOOTER */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* social media navigation */
+.socialmedia a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.socialmedia a img {
+  width: 30px;
+  height: 30px;
+}
