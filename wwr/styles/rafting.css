@@ -32,16 +32,47 @@ nav a:hover {
 }
 
 /* Hero Section */
-.hero {
-  text-align: center;
-  padding: 1rem;
+.hero img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.hero-image {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+.hero{
+  position: relative; 
+  text-align: left;  
 }
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(163, 173, 184, 0.7); /* semi-transparent overlay */
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 206, 80, 0.9); 
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+
 
 /* Company Section */
 .company {
@@ -82,7 +113,23 @@ footer {
   padding: 1rem;
 }
 
+/* Centering social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;      /* Centers vertically (if needed) */
+  gap: 10px;                /* Adds space between icons */
+  margin-top: 10px;
+}
+
 .social-icons img {
   width: 30px;
-  margin: 0 5px;
+  height: 30px;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
+
+.social-icons img:hover {
+  transform: scale(1.1); /* Little zoom effect on hover */
+}
+
