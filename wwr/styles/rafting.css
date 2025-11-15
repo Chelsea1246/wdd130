@@ -1,135 +1,176 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background-color:rgb(197, 223, 221);
-  color: #333;
+/* =============================
+   CSS VARIABLES
+============================= */
+:root {
+  --primary-color: #0a4c8c;
+  --light-color: #fff;
+  --text-color: #333;
 }
 
-/* Header */
+/* =============================
+   GLOBAL STYLES
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* =============================
+   HEADER & NAVIGATION
+============================= */
 header {
-  background-color: white;
+  background-color: var(--light-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-}
-
-header img.logo {
-  width: 80px;
-  height: auto;
+  padding: 1rem 2rem;
 }
 
 nav a {
-  margin: 0 1rem;
+  color: #333;
   text-decoration: none;
-  color: #0000cc;
+  margin-left: 1rem;
+  font-weight: 600;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--primary-color);
 }
 
-/* Hero Section */
-.hero img{
+/* =============================
+   HERO SECTION
+============================= */
+.hero {
+  position: relative;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.hero img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.hero{
-  position: relative; 
-  text-align: left;  
-}
-
 .hero h1 {
   position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
-  color: white;
-  background-color: rgba(163, 173, 184, 0.7); /* semi-transparent overlay */
+  top: 2rem;
+  left: 2rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  font-size: 2.4rem;
+  border-radius: 6px;
 }
 
 .hero article {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: rgba(255, 206, 80, 0.9); 
-  padding: 1rem;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
+  bottom: 2rem;
+  left: 2rem;
+  width: 45%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  line-height: 1.5;
 }
 
 .hero article img {
   float: right;
-  width: 125px;
-  margin-left: 10px;
-  border-radius: 5px;
+  width: 130px;
+  height: auto;
+  margin-left: 1rem;
+  border-radius: 8px;
 }
 
-
-
-/* Company Section */
-.company {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2rem;
+/* =============================
+   HISTORY GRID
+============================= */
+.history {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border-radius: 8px;
 }
 
-.company-text {
-  flex: 2;
-  margin-right: 1rem;
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.side-image {
-  flex: 1;
-  width: 250px;
-  border-radius: 10px;
-}
-
-/* History and Adventure Sections */ 
-.history, .adventure {
-  text-align: center;
-  padding: 2rem;
-  background-color:lavender
-  margin 1rem 0;
-}
-
-.history h2, .adventure h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-  background-color: white;
-  text-align: center;
+.history-item {
+  background: #f9f9f9;
   padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
 }
 
-/* Centering social media icons */
-.social-icons {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;      /* Centers vertically (if needed) */
-  gap: 10px;                /* Adds space between icons */
-  margin-top: 10px;
+.history-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
 }
 
-.social-icons img {
+.history-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.history-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* =============================
+   OTHER SECTIONS
+============================= */
+section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.socialmedia a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.socialmedia a img {
   width: 30px;
   height: 30px;
-  display: inline-block;
-  transition: transform 0.3s ease;
 }
-
-.social-icons img:hover {
-  transform: scale(1.1); /* Little zoom effect on hover */
-}
-
