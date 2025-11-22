@@ -1,15 +1,16 @@
-<<<<<<< HEAD
 /* =============================
    CSS VARIABLES
 ============================= */
 :root {
-  --primary-color: #0a4c8c;
-  --light-color: #fff;
-  --text-color: #333;
+  --primary-color: #0a4c8c;   /* headings, accents */
+  --accent-color: #f4c542;    /* hover, highlights */
+  --dark-color: #333;          /* nav/footer background */
+  --light-color: #fff;         /* text on dark bg */
+  --text-color: #333;          /* default body text */
 }
 
 /* =============================
-   GLOBAL STYLES
+   UNIVERSAL RESET
 ============================= */
 * {
   margin: 0;
@@ -17,6 +18,9 @@
   box-sizing: border-box;
 }
 
+/* =============================
+   BODY
+============================= */
 body {
   font-family: Arial, sans-serif;
   background-color: #eee;
@@ -35,15 +39,31 @@ header {
   padding: 1rem 2rem;
 }
 
+header img.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Nav container with dark background for contrast */
+nav {
+  background-color: var(--dark-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+}
+
+/* Nav links — white text for contrast */
 nav a {
-  color: #333;
+  color: var(--light-color);
   text-decoration: none;
   margin-left: 1rem;
   font-weight: 600;
 }
 
+/* Hover using accent color */
 nav a:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 /* =============================
@@ -61,26 +81,29 @@ nav a:hover {
   height: auto;
 }
 
+/* Hero title overlay */
 .hero h1 {
   position: absolute;
   top: 2rem;
   left: 2rem;
   background: rgba(0, 0, 0, 0.55);
-  color: #fff;
+  color: var(--light-color);
   padding: 0.7rem 1.2rem;
   font-size: 2.4rem;
   border-radius: 6px;
 }
 
+/* Hero article overlay */
 .hero article {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
   width: 45%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.90);
   padding: 1rem 1.2rem;
   border-radius: 6px;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .hero article img {
@@ -92,49 +115,7 @@ nav a:hover {
 }
 
 /* =============================
-   HISTORY GRID
-============================= */
-.history {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 1.5rem 2rem;
-  background: #fff;
-  border-radius: 8px;
-}
-
-.history-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.history-item {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.history-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 0.8rem;
-}
-
-.history-item h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.history-item p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-/* =============================
-   OTHER SECTIONS
+   SECTION STYLES
 ============================= */
 section {
   max-width: 1100px;
@@ -154,8 +135,8 @@ section h2 {
    FOOTER
 ============================= */
 footer {
-  background: #333;
-  color: #fff;
+  background: var(--dark-color);
+  color: var(--light-color);
   text-align: center;
   padding: 1.5rem 0;
   margin-top: 3rem;
@@ -164,149 +145,35 @@ footer {
 footer p {
   margin-bottom: 1rem;
   font-size: 1rem;
-}
-
-.socialmedia a {
-  margin: 0 0.5rem;
-  display: inline-block;
-}
-
-.socialmedia a img {
-  width: 30px;
-  height: 30px;
-}
-=======
-/* CSS VARIABLES */
-:root {
-  --primary-color: #0a4c8c;
-  --light-color: #fff;
-  --text-color: #333;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* STYLES */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #eee;
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* HEADER & NAVIGATION */
-header {
-  background-color: var(--light-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-}
-
-nav {
-  background-color: #333; /* fixes contrast */
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-}
-
-nav a {
-  color: #fff; 
-  text-decoration: none; 
-  margin-left: 1rem;
-  font-weight: 600;
-}
-
-nav a:hover {
-  opacity: 0.8;
-}
-
-/* HERO SECTION */
-.hero {
-  position: relative; 
-  max-width: 1200px;
-  margin: 2rem auto;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.hero h1 {
-  position: absolute; 
-  top: 2rem;
-  left: 2rem;
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  padding: 0.7rem 1.2rem;
-  font-size: 2.4rem;
-  border-radius: 6px;
 }
 
 /* =============================
-   HERO ARTICLE
-   ============================= */
-.hero article {
-  position: absolute; /* required */
-  bottom: 2rem;
-  left: 2rem;
-  width: 45%;
-  background: rgba(255, 255, 255, 0.90);
-  padding: 1rem 1.2rem;
-  border-radius: 6px;
-  line-height: 1.5;
-}
+   SOCIAL MEDIA ICONS
+============================= */
 
-.hero article img {
-  float: right; 
-  width: 130px;
-  height: auto;
-  margin-left: 1rem;
-  border-radius: 8px;
-}
-
-/*SECTION STYLES*/
-section {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background: #fff;
-  border-radius: 8px;
-}
-
-section h2 {
-  margin-bottom: 0.8rem;
-  color: var(--primary-color);
-  font-size: 1.8rem;
-}
-
-/*FOOTER */
 footer {
-  background: #333;
-  color: #fff;
+  background-color: white;
   text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 3rem;
+  padding: 1rem;
 }
 
-footer p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+/* Centering social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;      /* Centers vertically (if needed) */
+  gap: 10px;                /* Adds space between icons */
+  margin-top: 10px;
 }
 
-/* social media navigation */
-.socialmedia a {
-  margin: 0 0.5rem;
-  display: inline-block;
-}
-
-.socialmedia a img {
+.social-icons img {
   width: 30px;
   height: 30px;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
->>>>>>> b02e975b74f89a73ea5a9d538e52fdbaa6e3722c
+.social-icons img:hover {
+  transform: scale(1.1); /* Little zoom effect on hover */
+}
+
