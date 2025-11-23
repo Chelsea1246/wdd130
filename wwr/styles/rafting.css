@@ -32,7 +32,7 @@ body {
    HEADER & NAVIGATION
 ============================= */
 header {
-  background-color: var(--primary-color);
+  background-color: var(--light-color);
   color: var(--light-color);
   display: flex;
   align-items: center;
@@ -80,39 +80,30 @@ header nav a:hover {
 ============================= */
 .hero {
   position: relative;
-  max-width: 1200px;
-  margin: 2rem auto;
 }
 
 .hero img {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 /* Hero title overlay */
 .hero h1 {
   position: absolute;
   top: 20%;
-  left: 10%;
-  background: rgba(0, 0, 0, 0.55);
-  color: var(--light-color);
-  padding: 0.7rem 1.2rem;
-  font-size: 2.5rem;
-  border-radius: 6px;
+  left: 50%;
+  transform:translateX()
+  color: white;
 }
 
 /* Hero article overlay */
 .hero article {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  width: 45%;
-  background: rgba(255, 255, 255, 0.90);
-  padding: 1rem 1.2rem;
-  border-radius: 6px;
-  line-height: 1.5;
-  color: var(--text-color);
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
 }
 
 .hero article img {
@@ -136,7 +127,7 @@ section {
 
 section h2 {
   margin-bottom: 0.8rem;
-  color: var(--primary-color);
+  color: var(--light-color);
   font-size: 1.8rem;
 }
 
