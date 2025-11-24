@@ -1,12 +1,16 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
 /* ================================
    CSS VARIABLES
 ================================ */
 :root {
   --primary-color: #0a4c8c;
   --light-color: #ffffff;
-  --dark-color: #222;
   --text-color: #333;
-  --accent-color: #0f7ad1;
   --spacing: 1rem;
   --radius: 8px;
 }
@@ -103,6 +107,9 @@ img {
   width: 80px;
   border-radius: 50%;
   margin-left: 1rem;
+}
+.hero article{
+  float: right
 }
 
 /* ================================
