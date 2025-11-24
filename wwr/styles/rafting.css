@@ -1,134 +1,244 @@
-/* UNIVERSAL RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =============================
+   VARIABLES & RESET
+   ============================ */
+:root{
+  --purple: #d9ccff;      /* light purple background */
+  --accent: #c9b1ff;      /* darker purple accent */
+  --primary: #0a4c8c;     /* deep blue for text accents */
+  --muted: #f6f6f6;
+  --dark: #333333;
+  --white: #ffffff;
 }
 
-/* COLOR VARIABLES */
-:root {
-  --primary-color: #0a4c8c;
-  --light-color: #fff;
-  --text-color: #333;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{height:100%;}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  color: var(--dark);
+  line-height:1.5;
 }
 
-/* BODY */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: #f2f2f2;
+/* =============================
+   HEADER
+   ============================ */
+.site-header{
+  background: var(--purple);
+  padding: 18px 24px;
+  border: 2px solid rgba(0,0,0,0.06);
 }
 
-/* HEADER */
-header {
-  background-color: var(--primary-color);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-header img {
-  height: 60px;
+/* logo left */
+.logo img{
+  width:120px;
+  height:auto;
+  display:block;
+  border-radius:4px;
+  background: rgba(255,255,255,0.6);
+  padding:8px;
 }
 
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1rem;
-  font-size: 1rem;
+/* navigation */
+.main-nav{
+  display:flex;
+  gap:14px;
+  align-items:center;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  overflow: hidden;
+.main-nav .nav-item{
+  background: var(--white);
+  border:1px solid rgba(0,0,0,0.2);
+  padding:8px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04) inset;
 }
 
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
+.main-nav .nav-item.active{
+  background: #fff7e6;
+  border-color: rgba(0,0,0,0.08);
 }
 
-.hero h1 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 3rem;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+/* =============================
+   HERO
+   ============================ */
+.hero{
+  position:relative;
+  margin: 20px auto;
+  max-width:1100px;
 }
 
-.hero article {
-  position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.9);
-  padding: 1rem;
-  border-radius: 10px;
-  max-width: 90%;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+.hero-bg{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  display:block;
+  border: 2px solid rgba(0,0,0,0.08);
 }
 
-.hero article img {
-  width: 80px;
-  height: auto;
-  border-radius: 8px;
+/* centered page title */
+.hero-title{
+  text-align:center;
+  font-size:28px;
+  margin-top:-80px;
+  background: transparent;
+  color: #111;
+  padding:8px 0;
 }
 
-/* SECTIONS */
-main section {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
+/* white centered hero card */
+.hero-card{
+  position:relative;
+  margin: -20px auto 0;
+  max-width:940px;
+  background: var(--white);
+  border: 2px solid rgba(0,0,0,0.12);
+  padding:18px 26px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-main section h2 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+.hero-card-img{
+  width:72px;
+  height:72px;
+  object-fit:cover;
+  border-radius:4px;
+  margin-left:auto;
 }
 
-/* FIGURES */
-figure {
-  display: inline-block;
-  margin: 1rem;
-  text-align: center;
+.hero-card-text{
+  font-size:14px;
+  color:var(--dark);
+  flex:1;
 }
 
-figure img {
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
+/* =============================
+   SECTIONS (History & Adventure)
+   ============================ */
+main section{
+  max-width:1100px;
+  margin:28px auto;
+  padding:18px;
+  background: #fff;
+  border: 2px solid rgba(0,0,0,0.06);
+  border-radius:4px;
 }
 
-figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+main section > h2{
+  text-align:center;
+  font-size:22px;
+  margin-bottom:18px;
+  color: #111;
 }
 
-/* FOOTER */
-footer {
-  background: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+/* HISTORY GRID — 3 columns */
+.history-grid{
+  display:grid;
+  grid-template-columns: 1fr 300px 1fr;
+  gap:18px;
+  align-items:center;
 }
 
-footer nav.socialmedia {
-  margin-top: 1rem;
+.history-col p{
+  font-size:14px;
+  color:var(--dark);
 }
 
-footer nav.socialmedia a img {
-  width: 40px;
-  margin: 0 0.5rem;
-  background: white;
-  padding: 4px;
-  border-radius: 6px;
+.history-image-wrap img{
+  width:100%;
+  display:block;
+  border-radius:4px;
+  background: var(--accent);
+  padding:18px;
+}
+
+/* =============================
+   ADVENTURE GALLERY
+   ============================ */
+.adventure-gallery{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding:8px 6px;
+  flex-wrap:nowrap;
+}
+
+.adventure-gallery figure{
+  text-align:center;
+  width: 18%;
+  min-width:120px;
+}
+
+.adventure-gallery img{
+  width:100%;
+  height:100px;
+  object-fit:cover;
+  display:block;
+  border-radius:4px;
+  background: #eee;
+}
+
+.adventure-gallery figcaption{
+  margin-top:8px;
+  font-size:13px;
+  color:#444;
+}
+
+/* =============================
+   FOOTER
+   ============================ */
+footer{
+  margin-top:28px;
+  background: var(--purple);
+  padding:18px 12px;
+  border-top: 2px solid rgba(0,0,0,0.06);
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* updated footer text */
+.footer-text{
+  font-size:14px;
+  color:#222;
+  opacity:0.9;
+  font-weight:600;
+}
+
+.footer-text::before{
+  content: "©️ 2025 🎯 Rapids Adventure Rafting Company | Chelsea Afriyie Opoku";
+}
+
+.socialmedia{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.social-link img{
+  width:36px;
+  height:36px;
+  display:block;
+  background:#fff;
+  padding:6px;
+  border-radius:4px;
+  border:1px solid rgba(0,0,0,0.06);
 }
