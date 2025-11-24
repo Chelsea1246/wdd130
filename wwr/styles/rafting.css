@@ -16,15 +16,6 @@
 }
 
 /* ================================
-   RESET
-================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ================================
    GENERAL STYLES
 ================================ */
 body {
@@ -73,45 +64,54 @@ img {
 /* ================================
    HERO SECTION
 ================================ */
+
 .hero {
-  position: relative; /* REQUIRED */
+  position: relative;
 }
 
-.hero-bg {
-  width: 100%;
+.hero img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
-.hero-title {
-  position: absolute; /* REQUIRED */
+.hero h1 {
+  position: absolute;
   top: 20px;
-  left: 20px;
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--light-color);
-  text-shadow: 2px 2px 5px #000;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
 }
 
-.hero-card {
-  position: absolute; /* REQUIRED */
+.hero article {
+  position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: var(--spacing);
-  border-radius: var(--radius);
-  width: 350px;
+  right: 20px;
+  padding: 1rem;
+  background-color: rgba(255, 206, 80, 0.9);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
 }
 
-.hero-card-img {
-  float: right; /* REQUIRED */
-  width: 80px;
-  border-radius: 50%;
-  margin-left: 1rem;
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 10px;
 }
 
-.hero article{
-  float: right
+.hero .social-icons {
+  position: absolute;
+  bottom: 20px;   /* or top: 20px */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
 }
+
 
 /* ================================
    HISTORY SECTION
@@ -172,4 +172,11 @@ footer p {
 .socialmedia img {
   width: 30px;
   margin-left: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
