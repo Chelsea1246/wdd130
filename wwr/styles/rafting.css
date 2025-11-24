@@ -1,3 +1,9 @@
+* { 
+  margin: 0; 
+  padding: 0rem; 
+  box-sizing: border-box; 
+}
+
 /* ================================
    CSS VARIABLES
 ================================ */
@@ -15,12 +21,6 @@
 /* ================================
    GENERAL STYLES
 ================================ */
-
-* { 
-  margin: 0; 
-  padding: 0rem; 
-  box-sizing: border-box; 
-}
 
 body {
   font-family: Arial, sans-serif;
