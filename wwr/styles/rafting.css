@@ -207,13 +207,9 @@ z-index: 10;
 
 
 .adventure-gallery figure {
-
   text-align: center;
-
   background: var(--light-color);
-
   padding: 0.5rem;
-
   border-radius: var(--radius);
 
 }
