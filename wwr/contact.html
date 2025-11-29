@@ -2,10 +2,11 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Chelsea Afriyie Opoku">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — White Water Rafting Company</title>
   <meta name="description" content="Contact White Water Rafting Company for questions, reservations, and suggestions.">
-  <link rel="stylesheet" href="rafting.css">
+  <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 
     <!-- Contact Info at Top -->
     <section class="contact-top">
-      <h2>White Water Rafting Company</h2>
+      <h1>White Water Rafting Company</h1>
       <p>123 Main River Street<br>
          Kolob, California<br>
          +1 999 999 9999<br>
@@ -57,15 +58,15 @@
 
           <p><strong>Message Purpose</strong></p>
 
-          <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
-          <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-          <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+          <label><input type="radio" id="general" name="purpose" value="general"> General Inquiry</label>
+          <label><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
+          <label><input type="radio" id="website" name="purpose" value="website"> Website Suggestion</label>
 
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" required></textarea>
 
           <label>
-            <input type="checkbox" name="newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter">
             Please subscribe me to the monthly newsletter
           </label>
 
@@ -81,17 +82,17 @@
 
       <div class="employee-row">
         <div class="employee-card">
-          <img src="images/Daniel.jpg" alt="Daniel">
+          <img src="images/daniel.jpg" alt="Daniel - River Guide">
           <p>Daniel</p>
         </div>
 
         <div class="employee-card">
-          <img src="images/Chelsea.jpg" alt="Chelsea">
+          <img src="images/chelsea.jpg" alt="Chelsea - Safety Coordination">
           <p>Chelsea</p>
         </div>
 
         <div class="employee-card">
-          <img src="images/Sylvia.jpg" alt="Sylvia">
+          <img src="images/sylvia.jpg" alt="Sylvia - Trip Manager">
           <p>Sylvia</p>
         </div>
       </div>
@@ -103,11 +104,11 @@
   <footer>
     <p>© 2025 White Water Rafting Company</p>
 
-    <div class="footer-icons">
+    <nav class="socialmedia">
       <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
       <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
       <a href="#"><img src="images/linkedin.svg" alt="linkedin"></a>
-    </div>
+    </nav>
   </footer>
 
 </body>
