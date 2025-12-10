@@ -220,6 +220,7 @@ form label {
   display: block;
   margin-top: 1rem;
   font-weight: bold;
+  color: #000;
 }
 
 form input,
